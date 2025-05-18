@@ -1,0 +1,6 @@
+2025/05/18-12:52:33.391 54a0 Reusing MANIFEST C:\xampp5.6\htdocs\zakat\nodebot\.wwebjs_auth\session\Default\Local Storage\leveldb/MANIFEST-000001
+2025/05/18-12:52:33.392 54a0 Recovering log #3
+2025/05/18-12:52:33.393 54a0 Reusing old log C:\xampp5.6\htdocs\zakat\nodebot\.wwebjs_auth\session\Default\Local Storage\leveldb/000003.log 
+2025/05/18-13:32:06.585 372c Level-0 table #5: started
+2025/05/18-13:32:06.609 372c Level-0 table #5: 17178 bytes OK
+2025/05/18-13:32:06.612 372c Delete type=0 #3

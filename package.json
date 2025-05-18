@@ -1,0 +1,15 @@
+{
+  "name": "wa-bot",
+  "version": "1.0.0",
+  "description": "WhatsApp bot stable version",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^5.1.0",
+    "puppeteer": "^20.7.0",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.28.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
