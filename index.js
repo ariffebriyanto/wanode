@@ -27,7 +27,7 @@ client.on('ready', () => {
 
 client.initialize();
 
-// ⬇️ Fungsi delay (untuk hindari spam)
+// ⬇️ Fungsi delay (hindari spam dan mirip manusia)
 function delay(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -35,10 +35,10 @@ function delay(ms) {
 // ⬇️ Verifikasi apakah nomor terdaftar di WhatsApp
 async function isRegisteredNumber(number) {
   try {
-    const exists = await client.isRegisteredUser(`${number}@c.us`);
-    return exists;
+    const numberId = await client.getNumberId(number);
+    return numberId !== null;
   } catch (err) {
-    console.error('❌ Gagal cek nomor:', err);
+    console.error('❌ Gagal memeriksa nomor:', err);
     return false;
   }
 }
@@ -65,13 +65,8 @@ app.post('/send-message', async (req, res) => {
   }
 
   try {
-    // ⬇️ Simulasikan aktivitas manusia
-    await client.sendPresenceAvailable();
-    await client.sendTyping(`${number}@c.us`);
-    await delay(2000); // Simulasi ketik
-
-    // ⬇️ Delay antar pesan (hindari spam)
-    await delay(1500);
+    // ⬇️ Delay sebelum kirim (mirip manusia)
+    await delay(2000);
 
     // ⬇️ Kirim pesan
     await client.sendMessage(`${number}@c.us`, message);
